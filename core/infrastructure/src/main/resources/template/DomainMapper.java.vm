@@ -1,0 +1,14 @@
+package io.ddd.framework.infrastructure.repositoryimpl.${moduleName}.database.mapper;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import io.ddd.framework.infrastructure.repositoryimpl.${moduleName}.database.dataobject.${className}DO;
+import org.apache.ibatis.annotations.Mapper;
+/**
+ * ${comments}
+ * @author ${author}
+ * @date ${datetime}
+ */
+@Mapper
+public interface ${className}Mapper extends BaseMapper<${className}DO> {
+
+}

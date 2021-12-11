@@ -1,0 +1,20 @@
+package io.ddd.framework.coreclient.api.${moduleName};
+
+import io.ddd.framework.coreclient.dto.common.response.MultiResponse;
+import io.ddd.framework.coreclient.dto.common.response.PageResponse;
+import io.ddd.framework.coreclient.dto.common.response.Response;
+import io.ddd.framework.coreclient.dto.common.response.SingleResponse;
+import io.ddd.framework.coreclient.dto.${moduleName}.${allLowName}.*;
+/**
+ * ${comments}
+ * @author ${author}
+ * @date ${datetime}
+ */
+public interface ${className}AppService {
+    Response add(${className}AddCmd cmd);
+    Response update(${className}UpdateCmd cmd);
+    Response delete(${className}DeleteCmd userDeleteCmd);
+    SingleResponse<${className}DTO> getById(${className}GetQry qry);
+    MultiResponse<${className}DTO> list(${className}ListQry qry);
+    PageResponse<${className}DTO> page(${className}PageQry userPageQry);
+}

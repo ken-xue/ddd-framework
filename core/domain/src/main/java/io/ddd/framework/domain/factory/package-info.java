@@ -1,0 +1,1 @@
+package io.ddd.framework.domain.factory;

@@ -1,0 +1,13 @@
+package io.ddd.framework.domain.factory.${moduleName};
+
+import io.ddd.framework.domain.domain.${moduleName}.${className};
+/**
+ * ${comments}
+ * @author ${author}
+ * @date ${datetime}
+ */
+public class ${className}Factory {
+    public static ${className} get${className}(){
+        return new ${className}();
+    }
+}

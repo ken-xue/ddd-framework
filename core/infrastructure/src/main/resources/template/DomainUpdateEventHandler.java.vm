@@ -1,0 +1,21 @@
+package io.ddd.framework.application.application.${moduleName}.${allLowName}.handler;
+
+import EventHandler;
+import EventHandlerI;
+import io.ddd.framework.coreclient.dto.common.response.Response;
+import io.ddd.framework.coreclient.dto.${moduleName}.${allLowName}.event.${className}UpdateEvent;
+import lombok.extern.slf4j.Slf4j;
+/**
+ * ${comments}
+ * @author ${author}
+ * @date ${datetime}
+ */
+@Slf4j
+@EventHandler
+public class ${className}UpdateEventHandler implements EventHandlerI<Response, ${className}UpdateEvent> {
+    
+    public Response execute(${className}UpdateEvent event) {
+        log.debug("Handling Event:{}",event);
+        return Response.success();
+    }
+}
