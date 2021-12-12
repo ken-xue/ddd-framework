@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.28, for macos10.14 (x86_64)
 --
--- Host: 127.0.0.1    Database: ddd_foramework
+-- Host: 127.0.0.1    Database: ddd_framework
 -- ------------------------------------------------------
 -- Server version	5.7.28
 
