@@ -1,10 +1,13 @@
 package io.ddd.framework.domain.domain.sys;
 
+import com.sun.source.tree.AssertTree;
+import io.ddd.framework.coreclient.dto.sys.menu.enums.MenuEnum;
 import io.ddd.framework.domain.common.CommonEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
+import org.springframework.util.Assert;
 
 /**
  * 菜单表
@@ -52,4 +55,11 @@ public class Menu extends CommonEntity {
      *
      */
     private Boolean hasChildren;
+
+    @Override
+    public void validate(){
+        //菜单路径必须以/开头
+        if (MenuEnum.MENU.getCode()==menuType)
+        Assert.isTrue(menuUrl.startsWith("/"),"菜单路径必须以/开头");
+    }
 }

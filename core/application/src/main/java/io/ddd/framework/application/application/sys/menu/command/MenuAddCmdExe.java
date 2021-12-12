@@ -26,6 +26,7 @@ public class MenuAddCmdExe {
     public Response execute(MenuAddCmd cmd) {
         Menu menu = menu2DTOAssembler.toDomain(cmd.getMenuDTO());
         menu.create(UserThreadContext.get());
+        menu.validate();
         menuRepository.create(menu);
         return Response.success();
     }
