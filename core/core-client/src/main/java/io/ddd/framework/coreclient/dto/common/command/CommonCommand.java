@@ -1,7 +1,7 @@
 package io.ddd.framework.coreclient.dto.common.command;
 
 /**
- * 整个应用通用的Command
+ * 通用的Command
  */
 public class CommonCommand extends Command{
 

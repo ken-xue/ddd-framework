@@ -1,7 +1,5 @@
 package io.ddd.framework.domain.common;
 
-
-
 import java.io.Serializable;
 
 /**

@@ -1,10 +1,10 @@
 # ddd-framework
 
 <p align="center">
-  <a href="https://gitee.com/mikeygitee/ddd-framework/blob/master/LICENSE">
+  <a href="https://github.com/ken-xue/ddd-framework/blob/master/LICENSE">
     <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=green">
   </a>
-  <a href="https://gitee.com/mikeygitee/ddd-framework/blob/master/LICENSE">
+  <a href="https://www.oracle.com/java">
     <img src="https://img.shields.io/static/v1?label=JDK&message=1.8&color=red">
   </a>
 </p>
@@ -13,7 +13,7 @@
 
 ## Introduction
 
-> ddd-framework 是一款基于领域驱动设计的开发脚手架，拥有极高的拓展性，能够应对大型复杂系统的架构。采用前后端分离开发模式([前端地址]()) 提供代码生成器
+> ddd-framework 是一款基于领域驱动设计的开发脚手架，拥有极高的拓展性，能够应对大型复杂系统的架构。采用[前端](ttps://github.com/ken-xue/ddd-framework-vue),[后端](https://github.com/ken-xue/ddd-framework) 分离开发模式, 提供[代码生成器](https://github.com/ken-xue/ddd-framework-code-generator)
 
 ## Architecture
 
@@ -43,7 +43,7 @@ ddd-framework
 ## QuickStart
 
 ```bash
-git clone https://gitee.com/mikeygithub/ddd-framework.git
+git clone https://github.com/ken-xue/ddd-framework.git
 cd ddd-framework
 mvn install
 ```
@@ -52,10 +52,5 @@ mvn install
 - [Detail Design Document]()
 
 ## License
+
 MIT see [LICENSE](./LICENSE).
-
-
-# TODO
-
-- 适配多种存储类型
-- 验证码问题
