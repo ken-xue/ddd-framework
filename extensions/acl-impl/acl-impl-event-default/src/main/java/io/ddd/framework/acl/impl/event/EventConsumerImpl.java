@@ -1,4 +1,4 @@
-package io.ddd.framework.acl.impl.incident;
+package io.ddd.framework.acl.impl.event;
 
 import io.ddd.framework.acl.event.Consumer;
 import io.ddd.framework.application.common.event.EventBus;
