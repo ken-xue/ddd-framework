@@ -21,5 +21,6 @@
         <module>client</module>
         <module>extensions</module>
         <module>dependencies</module>
+        <module>extensions/acl-impl/acl-impl-cached-default</module>
     </modules>
 </project>
