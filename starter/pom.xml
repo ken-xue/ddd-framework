@@ -129,7 +129,7 @@
         </dependency>
         <dependency>
             <groupId>io.ddd.framework</groupId>
-            <artifactId>acl-impl-incident-default</artifactId>
+            <artifactId>acl-impl-event-default</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
