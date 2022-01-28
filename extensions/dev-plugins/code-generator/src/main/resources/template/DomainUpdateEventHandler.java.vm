@@ -1,7 +1,7 @@
 package io.ddd.framework.application.application.${moduleName}.${allLowName}.handler;
 
-import EventHandler;
-import EventHandlerI;
+import io.ddd.framework.application.common.event.EventHandler;
+import io.ddd.framework.application.common.event.EventHandlerI;
 import io.ddd.framework.coreclient.dto.common.response.Response;
 import io.ddd.framework.coreclient.dto.${moduleName}.${allLowName}.event.${className}UpdateEvent;
 import lombok.extern.slf4j.Slf4j;

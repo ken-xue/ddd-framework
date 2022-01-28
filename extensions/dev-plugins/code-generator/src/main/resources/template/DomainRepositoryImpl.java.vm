@@ -6,7 +6,7 @@ import io.ddd.framework.domain.domain.${moduleName}.${className};
 import io.ddd.framework.domain.repository.${moduleName}.${className}Repository;
 import io.ddd.framework.infrastructure.repositoryimpl.${moduleName}.database.convertor.${className}2DOConvector;
 import io.ddd.framework.infrastructure.repositoryimpl.${moduleName}.database.dataobject.${className}DO;
-import io.ddd.framework.infrastructure.repositoryimpl.${moduleName}.${allLowName}.${className}PageQry;
+import io.ddd.framework.coreclient.dto.${moduleName}.${allLowName}.${className}PageQry;
 import io.ddd.framework.infrastructure.repositoryimpl.${moduleName}.database.mapper.${className}Mapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

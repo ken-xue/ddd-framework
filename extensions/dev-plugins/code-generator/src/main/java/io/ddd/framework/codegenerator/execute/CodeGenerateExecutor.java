@@ -17,6 +17,7 @@ public class CodeGenerateExecutor {
     @PostConstruct
     private void execute() throws ConfigurationException {
         PropertiesConfiguration configuration = new PropertiesConfiguration("generator.properties");
-        codeGeneratorHandler.execute(configuration);
+        //open it
+        //codeGeneratorHandler.execute(configuration);
     }
 }
