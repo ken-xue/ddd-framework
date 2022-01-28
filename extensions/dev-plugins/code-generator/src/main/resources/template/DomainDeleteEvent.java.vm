@@ -1,0 +1,16 @@
+package io.ddd.framework.coreclient.dto.${moduleName}.${allLowName}.event;
+
+import io.ddd.framework.coreclient.dto.common.event.DomainEventI;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+/**
+ * ${comments}
+ * @author ${author}
+ * @date ${datetime}
+ */
+@Data
+@AllArgsConstructor
+public class ${className}DeleteEvent implements DomainEventI {
+    private String uuid;
+}

@@ -1,0 +1,22 @@
+package io.ddd.framework.domain.domain.${moduleName};
+
+import io.ddd.framework.domain.common.CommonEntity;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+/**
+ * ${comments}
+ * @author ${author}
+ * @date ${datetime}
+ */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class ${className} extends CommonEntity {
+#foreach ($column in $columns)
+    /**
+     * ${column.comments}
+     */
+    private $column.attrType $column.attrname;
+#end
+}

@@ -8,6 +8,7 @@
     <packaging>pom</packaging>
     <name>ddd-framework</name>
     <description>ddd-framework</description>
+
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

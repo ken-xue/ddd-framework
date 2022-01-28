@@ -1,0 +1,28 @@
+package io.ddd.framework.application.application.${moduleName}.${allLowName}.command;
+
+import io.ddd.framework.coreclient.context.UserThreadContext;
+import io.ddd.framework.coreclient.dto.common.response.Response;
+import io.ddd.framework.domain.repository.${moduleName}.${className}Repository;
+import io.ddd.framework.domain.domain.${moduleName}.${className};
+import io.ddd.framework.coreclient.dto.${moduleName}.${allLowName}.${className}DeleteCmd;
+import org.springframework.stereotype.Component;
+import javax.annotation.Resource;
+/**
+ * ${comments}
+ * @author ${author}
+ * @date ${datetime}
+ */
+@Component
+public class ${className}DeleteCmdExe {
+    @Resource
+    private ${className}Repository ${classname}Repository;
+
+    public Response execute(${className}DeleteCmd cmd) {
+        for(Long id:cmd.getIds()) {
+            ${className} ${classname} =${classname}Repository.getById(id);
+            ${classname}.deleted(UserThreadContext.get());
+            ${classname}Repository.update(${classname});
+        }
+        return Response.success();
+    }
+}
