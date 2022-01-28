@@ -1,4 +1,4 @@
-package io.ddd.framework.acl.impl.authorize.constant;
+package io.ddd.framework.acl.authorize.constant;
 
 public class Constant {
     public static final String SIGNING_KEY = "spring-security-@Jwt!&Secret^#";

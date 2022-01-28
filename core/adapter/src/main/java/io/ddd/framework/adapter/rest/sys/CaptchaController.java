@@ -1,7 +1,7 @@
 package io.ddd.framework.adapter.rest.sys;
 
-import io.ddd.framework.acl.impl.authorize.AuthorizeService;
-import io.ddd.framework.acl.impl.authorize.dto.CaptchaGetDTO;
+import io.ddd.framework.acl.authorize.AuthorizeService;
+import io.ddd.framework.acl.authorize.dto.CaptchaGetDTO;
 import io.ddd.framework.adapter.rest.common.BasicController;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

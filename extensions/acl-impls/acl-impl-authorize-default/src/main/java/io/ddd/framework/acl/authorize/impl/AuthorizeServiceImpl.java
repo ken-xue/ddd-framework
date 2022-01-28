@@ -1,11 +1,11 @@
-package io.ddd.framework.acl.impl.authorize.impl;
+package io.ddd.framework.acl.authorize.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.google.code.kaptcha.Producer;
-import io.ddd.framework.acl.impl.authorize.AuthorizeService;
-import io.ddd.framework.acl.impl.authorize.dto.CaptchaGetDTO;
-import io.ddd.framework.acl.impl.authorize.dto.CaptchaValidateDTO;
-import io.ddd.framework.acl.impl.authorize.constant.Constant;
+import io.ddd.framework.acl.authorize.AuthorizeService;
+import io.ddd.framework.acl.authorize.constant.Constant;
+import io.ddd.framework.acl.authorize.dto.CaptchaGetDTO;
+import io.ddd.framework.acl.authorize.dto.CaptchaValidateDTO;
 import io.ddd.framework.infrastructure.repositoryimpl.sys.database.dataobject.CaptchaDO;
 import io.ddd.framework.infrastructure.repositoryimpl.sys.database.mapper.CaptchaMapper;
 import lombok.extern.slf4j.Slf4j;

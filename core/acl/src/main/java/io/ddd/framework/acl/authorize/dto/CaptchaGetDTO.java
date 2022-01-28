@@ -1,4 +1,4 @@
-package io.ddd.framework.acl.impl.authorize.dto;
+package io.ddd.framework.acl.authorize.dto;
 
 import lombok.Data;
 import lombok.experimental.Accessors;

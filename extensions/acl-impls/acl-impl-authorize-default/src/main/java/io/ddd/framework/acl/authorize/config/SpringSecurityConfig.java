@@ -1,10 +1,10 @@
-package io.ddd.framework.acl.impl.authorize.config;
+package io.ddd.framework.acl.authorize.config;
 
-import io.ddd.framework.acl.impl.authorize.AuthorizeService;
-import io.ddd.framework.acl.impl.authorize.filter.JWTAuthenticationFilter;
-import io.ddd.framework.acl.impl.authorize.filter.JWTLoginFilter;
-import io.ddd.framework.acl.impl.authorize.handler.CustomAuthenticationEntryPoint;
-import io.ddd.framework.acl.impl.authorize.impl.AuthenticationProviderImpl;
+import io.ddd.framework.acl.authorize.AuthorizeService;
+import io.ddd.framework.acl.authorize.filter.JWTAuthenticationFilter;
+import io.ddd.framework.acl.authorize.filter.JWTLoginFilter;
+import io.ddd.framework.acl.authorize.handler.CustomAuthenticationEntryPoint;
+import io.ddd.framework.acl.authorize.impl.AuthenticationProviderImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

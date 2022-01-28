@@ -1,6 +1,6 @@
-package io.ddd.framework.acl.impl.authorize.handler;
+package io.ddd.framework.acl.authorize.handler;
 
-import io.ddd.framework.acl.impl.authorize.util.ResponseUtil;
+import io.ddd.framework.acl.authorize.util.ResponseUtil;
 import io.ddd.framework.coreclient.dto.common.response.Response;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;

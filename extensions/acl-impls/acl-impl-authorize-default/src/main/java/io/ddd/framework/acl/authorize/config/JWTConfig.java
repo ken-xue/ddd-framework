@@ -1,4 +1,4 @@
-package io.ddd.framework.acl.impl.authorize.config;
+package io.ddd.framework.acl.authorize.config;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;

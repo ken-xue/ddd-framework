@@ -1,4 +1,4 @@
-package io.ddd.framework.acl.impl.authorize.util;
+package io.ddd.framework.acl.authorize.util;
 
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;

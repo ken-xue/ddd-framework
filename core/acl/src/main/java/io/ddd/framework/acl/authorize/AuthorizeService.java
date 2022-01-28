@@ -1,7 +1,7 @@
-package io.ddd.framework.acl.impl.authorize;
+package io.ddd.framework.acl.authorize;
 
-import io.ddd.framework.acl.impl.authorize.dto.CaptchaGetDTO;
-import io.ddd.framework.acl.impl.authorize.dto.CaptchaValidateDTO;
+import io.ddd.framework.acl.authorize.dto.CaptchaGetDTO;
+import io.ddd.framework.acl.authorize.dto.CaptchaValidateDTO;
 
 import java.awt.image.BufferedImage;
 import java.util.List;

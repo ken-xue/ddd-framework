@@ -1,4 +1,4 @@
-package io.ddd.framework.acl.impl.authorize.impl;
+package io.ddd.framework.acl.authorize.impl;
 
 import io.ddd.framework.domain.domain.sys.Menu;
 import io.ddd.framework.domain.domain.sys.Role;

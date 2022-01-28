@@ -1,4 +1,4 @@
-package io.ddd.framework.acl.impl.authorize.handler;
+package io.ddd.framework.acl.authorize.handler;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.AccessDeniedException;

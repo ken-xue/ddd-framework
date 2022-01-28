@@ -1,4 +1,4 @@
-package io.ddd.framework.acl.impl.authorize.impl;
+package io.ddd.framework.acl.authorize.impl;
 
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;

@@ -1,6 +1,6 @@
 package io.ddd.framework.adapter.common.aspect;
 
-import io.ddd.framework.acl.impl.authorize.AuthorizeService;
+import io.ddd.framework.acl.authorize.AuthorizeService;
 import io.ddd.framework.adapter.common.annotation.Permissions;
 import io.ddd.framework.coreclient.exception.BizException;
 import lombok.extern.slf4j.Slf4j;
