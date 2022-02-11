@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class UserMapper {
+public class RPCUserMapper {
     /**
      *  Dummy RPC Call
      */

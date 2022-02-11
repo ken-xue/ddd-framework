@@ -1,6 +1,5 @@
 package io.ddd.framework.domain.domain.sys;
 
-import com.sun.source.tree.AssertTree;
 import io.ddd.framework.coreclient.dto.sys.menu.enums.MenuEnum;
 import io.ddd.framework.domain.common.CommonEntity;
 import lombok.AllArgsConstructor;

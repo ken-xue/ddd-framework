@@ -19,6 +19,6 @@
         <mapper resource="mybatis/MenuMapper.xml"></mapper>
         <mapper resource="mybatis/LogMapper.xml"></mapper>
         <mapper resource="mybatis/CaptchaMapper.xml"></mapper>
-        <mapper resource="mybatis/CodeGeneratorMapper.xml"></mapper>
+<!--        <mapper resource="mybatis/CodeGeneratorMapper.xml"></mapper>-->
     </mappers>
 </configuration>
