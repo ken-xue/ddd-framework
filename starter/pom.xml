@@ -135,6 +135,7 @@
     </dependencies>
 
     <build>
+        <finalName>ddd-framework</finalName>
         <pluginManagement>
             <plugins>
                 <plugin>
