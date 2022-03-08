@@ -25,19 +25,20 @@
 
 ```
 ddd-framework
-    ├─core        核心模块
-    │  ├─acl            防腐层
-    │  ├─adapter        控制层
-    │  ├─application    应用层
-    │  ├─core-client    核心二方包
-    │  ├─domain         领域层
-    │  └─infrastructure 基础设施层
-    ├─extensions   外部拓展
-    │  └─acl-impl       acl实现
-    ├─client            二方包
-    ├─core              启动类
-    ├─dependencies      依赖管理
-    └─doc               文档数据
+    ├─core              核心模块
+    │  ├─acl                防腐层
+    │  ├─adapter            控制层
+    │  ├─application        应用层
+    │  ├─core-client        核心二方包
+    │  ├─domain             领域层
+    │  ├─share-dataobject   全局共享数据对象
+    │  └─infrastructure     基础设施层
+    ├─extensions        外部拓展
+    │  └─acl-impl           acl实现
+    ├─client                二方包
+    ├─core                  启动类
+    ├─dependencies          依赖管理
+    └─doc                   文档数据
 ```
 
 ## QuickStart
