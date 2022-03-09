@@ -5,6 +5,7 @@ APP_NAME=ddd-framework
 
 PROG_NAME=$0
 ACTION=$1
+ENV=$2
 APP_START_TIMEOUT=20    # 等待应用启动的时间
 APP_PORT=8088         # 应用端口
 HEALTH_CHECK_URL=http://127.0.0.1:${APP_PORT}/api/ok  # 应用健康检查URL
@@ -18,7 +19,7 @@ mkdir -p ${HEALTH_CHECK_FILE_DIR}
 mkdir -p ${APP_HOME}
 mkdir -p ${APP_HOME}/logs
 usage() {
-    echo "Usage: $PROG_NAME {start|stop|restart}"
+    echo "Usage: $PROG_NAME {start|stop|restart} [dev|test|prod]"
     exit 2
 }
 
@@ -51,7 +52,22 @@ health_check() {
 
 start_application() {
     echo "starting java process"
-    nohup java -jar ${JAR_NAME} > ${JAVA_OUT} 2>&1 &
+    if [ "$ENV" == "dev" ]
+    then
+      echo "use env dev"
+      nohup java -jar ${JAR_NAME} > ${JAVA_OUT} 2>&1 &
+    elif [ "$ENV" == "test" ]
+    then
+      nohup java -jar ${JAR_NAME} > ${JAVA_OUT} --spring.profiles.active=test 2>&1 &
+      echo "use env test"
+    elif [ "$ENV" == "prod" ]
+    then
+      nohup java -jar ${JAR_NAME} > ${JAVA_OUT} --spring.profiles.active=prod 2>&1 &
+      echo "use env prod"
+    else
+      nohup java -jar ${JAR_NAME} > ${JAVA_OUT} 2>&1 &
+      echo "use default env dev"
+    fi
     echo "started java process"
 }
 
