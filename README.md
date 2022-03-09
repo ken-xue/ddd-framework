@@ -13,7 +13,7 @@
 
 ## Introduction
 
-> ddd-framework 是一款基于领域驱动设计的开发脚手架，拥有极高的拓展性，能够应对大型复杂系统的架构。采用[前端](https://github.com/ken-xue/ddd-framework-vue) ,[后端](https://github.com/ken-xue/ddd-framework) 分离开发模式, 提供[代码生成器](https://github.com/ken-xue/ddd-framework-code-generator)
+> ddd-framework 是一款基于领域驱动设计的开发脚手架，拥有极高的拓展性，能够应对大型复杂系统的架构。采用[前](https://github.com/ken-xue/ddd-framework-vue) [后](https://github.com/ken-xue/ddd-framework) 端分离开发, 提供[代码生成器](./extensions/dev-plugins/code-generator)
 
 ## Architecture
 
@@ -48,6 +48,24 @@ git clone https://github.com/ken-xue/ddd-framework.git
 cd ddd-framework
 mvn install
 ```
+
+Setting->Build,Execution,Deployment->Compiler->User-local build
+```shell
+-Djps.track.ap.dependencies=false
+```
+
+## CodeGenerator
+
+1.create you database table
+
+2.config generator properties [see](./extensions/dev-plugins/code-generator/src/main/resources/application.properties)
+
+3.cancel code annotation [see](extensions/dev-plugins/code-generator/src/main/java/com/jiaozhen/zhenfu/codegenerator/execute/CodeGenerateExecutor.java)
+
+4.start CodeGenerator
+
+5.perfect ! success generate code in you project path ! enjoy !
+
 ## Document
 
 - [Detail Design Document]()
