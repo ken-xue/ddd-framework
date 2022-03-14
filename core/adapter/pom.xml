@@ -61,7 +61,10 @@
             <groupId>com.github.axet</groupId>
             <artifactId>kaptcha</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>io.ddd.framework</groupId>
+            <artifactId>share-dataobject</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

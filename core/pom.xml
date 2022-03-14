@@ -65,6 +65,11 @@
                 <artifactId>infrastructure</artifactId>
                 <version>${revision}</version>
             </dependency>
+            <dependency>
+                <groupId>io.ddd.framework</groupId>
+                <artifactId>share-dataobject</artifactId>
+                <version>${revision}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>

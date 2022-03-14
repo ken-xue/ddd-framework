@@ -17,5 +17,9 @@
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>io.ddd.framework</groupId>
+			<artifactId>share-dataobject</artifactId>
+		</dependency>
     </dependencies>
 </project>

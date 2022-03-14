@@ -52,10 +52,11 @@
         </dependency>
 
 
+        <!-- https://mvnrepository.com/artifact/org.apache.velocity/velocity-engine-core -->
         <dependency>
             <groupId>org.apache.velocity</groupId>
             <artifactId>velocity-engine-core</artifactId>
-            <version>2.2</version>
+            <version>2.3</version>
         </dependency>
 
 
