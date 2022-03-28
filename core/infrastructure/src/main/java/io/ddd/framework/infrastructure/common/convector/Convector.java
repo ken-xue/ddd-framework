@@ -1,4 +1,4 @@
-package io.ddd.framework.infrastructure.repositoryimpl.sys.database.convertor;
+package io.ddd.framework.infrastructure.common.convector;
 
 import java.util.List;
 

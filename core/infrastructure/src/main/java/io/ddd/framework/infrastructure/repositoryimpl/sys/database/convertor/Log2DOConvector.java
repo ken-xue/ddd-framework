@@ -1,6 +1,7 @@
 package io.ddd.framework.infrastructure.repositoryimpl.sys.database.convertor;
 
 import io.ddd.framework.domain.domain.sys.Log;
+import io.ddd.framework.infrastructure.common.convector.Convector;
 import io.ddd.framework.infrastructure.repositoryimpl.sys.database.dataobject.LogDO;
 import org.springframework.stereotype.Component;
 
@@ -12,7 +13,7 @@ import java.util.List;
  * @date 2021-12-03 17:28:52
  */
 @Component
-public class Log2DOConvector implements Convector<Log, LogDO>{
+public class Log2DOConvector implements Convector<Log, LogDO> {
     public LogDO toDO(Log log) {
         return Log2DOMapStruct.INSTANCE.toDO(log);
     }

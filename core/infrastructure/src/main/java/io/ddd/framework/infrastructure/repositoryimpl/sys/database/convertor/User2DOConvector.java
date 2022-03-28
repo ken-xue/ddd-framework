@@ -1,13 +1,14 @@
 package io.ddd.framework.infrastructure.repositoryimpl.sys.database.convertor;
 
 import io.ddd.framework.domain.domain.sys.User;
+import io.ddd.framework.infrastructure.common.convector.Convector;
 import io.ddd.framework.infrastructure.repositoryimpl.sys.database.dataobject.UserDO;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @Component
-public class User2DOConvector implements Convector<User,UserDO>{
+public class User2DOConvector implements Convector<User,UserDO> {
 
     public UserDO toDO(User user) {
         return User2DOMapStruct.INSTANCE.toDO(user);

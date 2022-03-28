@@ -1,6 +1,7 @@
 package io.ddd.framework.infrastructure.repositoryimpl.sys.database.convertor;
 
 import io.ddd.framework.domain.domain.sys.Dictionary;
+import io.ddd.framework.infrastructure.common.convector.Convector;
 import io.ddd.framework.infrastructure.repositoryimpl.sys.database.dataobject.DictionaryDO;
 import org.springframework.stereotype.Component;
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.List;
  * @date 2022-01-28 21:50:48
  */
 @Component
-public class Dictionary2DOConvector implements Convector<Dictionary,DictionaryDO>{
+public class Dictionary2DOConvector implements Convector<Dictionary,DictionaryDO> {
     
     public DictionaryDO toDO(Dictionary dictionary) {
         return Dictionary2DOMapStruct.INSTANCE.toDO(dictionary);
