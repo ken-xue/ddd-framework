@@ -191,7 +191,7 @@
             <plugin>
                 <groupId>io.ddd.framework</groupId>
                 <artifactId>ddd-framework-maven-plugin</artifactId>
-                <version>1.0.2-SNAPSHOT</version>
+                <version>1.0.4-SNAPSHOT</version>
                 <configuration>
                     <dataSource>
                         <driverName>com.mysql.cj.jdbc.Driver</driverName>
@@ -200,11 +200,11 @@
                         <password>123456</password>
                     </dataSource>
                     <config>
-                        <sourcePath>./</sourcePath>
+                        <absolutePath>/Users/biaoyang/IdeaProjects/ddd/ddd-framework/</absolutePath>
                         <tablePrefixes>sys_,biz_</tablePrefixes>
                         <moduleName>sys</moduleName>
                         <basePackageName>io.ddd.framework</basePackageName>
-                        <tableNames>sys_user,sys_menu</tableNames>
+                        <tableNames>sys_test,sys_use</tableNames>
                         <excludeFields>id,uuid,creator,modifier,gmt_create,gmt_modified,deleted</excludeFields>
                         <author>麦奇</author>
                         <email>biaogejiushibiao@outlook.com</email>
