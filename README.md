@@ -19,7 +19,7 @@
 
 ### Application Layer  
 
-![img](https://cdn.nlark.com/yuque/0/2021/png/2630542/1639145697424-168ad4a4-aa29-4d10-b005-399fc26c00f7.png)
+![img](./doc/ddd-layer.png)
 
 ### Directory Structure
 
