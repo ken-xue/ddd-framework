@@ -14,20 +14,20 @@
   <a title="GitHub Forks" target="_blank" href="https://github.com/ken-xue/ddd-framework/network/members"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/ken-xue/ddd-framework.svg?label=Forks&style=social"></a>
 </p>
 
-<p align="center"> 中文简体  |  <a title="Englist" href="README_en.md"> English</a></p>
+<p align="center"><a title="Chinese" href="README.md"> 中文简体</a>  |  English</p>
 
 
-## 介绍
+## Introduction
 
-> ddd-framework 是一款基于领域驱动设计的开发脚手架，拥有极高的拓展性，能够应对大型复杂系统的架构。采用[前](https://github.com/ken-xue/ddd-framework-vue) [后](https://github.com/ken-xue/ddd-framework) 端分离开发, 提供[代码生成器](https://github.com/ken-xue/ddd-framework-maven-plugin)
+> ddd-framework It is a development scaffold based on Domain Driven Design. It has high expansibility and can deal with the architecture of large and complex systems. Adopt [front](https://github.com/ken-xue/ddd-framework-vue) and [back-end](https://github.com/ken-xue/ddd-framework) separate development and provide [code generator](https://github.com/ken-xue/ddd-framework-maven-plugin)
 
-## 架构
+## Architecture
 
-### 分层架构 
+### Application Layer
 
 ![img](./doc/ddd-layer.png)
 
-### 目录结构
+### Directory Structure
 
 ```
 ddd-framework
@@ -47,7 +47,7 @@ ddd-framework
     └─doc                   文档数据
 ```
 
-## 快速开始
+## QuickStart
 
 ```bash
 git clone https://github.com/ken-xue/ddd-framework.git
@@ -55,18 +55,18 @@ cd ddd-framework
 mvn install
 ```
 
-- 如果遇到mapstruct问题请在Idea里如下设置
+- If you encounter mapstruct problems, please set the following settings in idea
 
 Setting->Build,Execution,Deployment->Compiler->User-local build
 ```shell
 -Djps.track.ap.dependencies=false
 ```
 
-## 代码生成器
+## CodeGenerator
 
-1.创建数据库表
+1.create you database table
 
-2.导入插件
+2.import maven dependency
 
 ```xml
 <plugin>
@@ -94,25 +94,25 @@ Setting->Build,Execution,Deployment->Compiler->User-local build
 </plugin>
 ```
 
-3.执行生成命令
+3.execute cmd
 
 ```shell
 mvn ddd-framework:generate
 ```
-4.清除最近一次生成的代码文件
+4.clean last time code
 
 ```shell
 mvn ddd-framework:delete
 ```
 
-5.生成的文件会在你配置的路径下
+5.perfect ! success generate code in you project path ! enjoy ! maven plugin source code see
 
-## 文档
+## Document
 
 - [详细设计文档]()
 
-## 许可证
+## License
 
-MIT see [LICENSE](./LICENSE).  
+MIT see [LICENSE](./LICENSE).
 
 welcome!
