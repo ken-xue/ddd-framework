@@ -1,4 +1,5 @@
 package io.ddd.framework.adapter.config;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,6 +17,7 @@ import java.util.List;
 
 @Configuration
 @EnableSwagger2
+@ConditionalOnProperty(name = "swagger.enable", havingValue = "true")
 public class SwaggerConfig {
     // 设置默认TOKEN，方便测试
     private static final String TOKEN = "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6aGFveGluZ3VvLVtST0xFX0FETUlOLCBBVVRIX1dSSVRFXSIsImV4cCI6MTUzOTMzOTM0NX0.P9dkLQ7lpNODJppHBM-InSS90nw0XJieK8QNlZM0TeuNNQ8sUPYH-uif099A1-P2Ap6b_9lCLbXL2iR0OLdFyw";
@@ -38,6 +40,21 @@ public class SwaggerConfig {
                         new ResponseMessageBuilder().code(403).message("Forbidden").build()));
         return docket;
     }
+
+    @Bean
+    public Docket createRestApiForSys() {
+        return new Docket(DocumentationType.SWAGGER_2).enable(true).apiInfo(apiInfo()).select()
+                .apis(RequestHandlerSelectors.basePackage("io.ddd.framework.adapter.rest.sys"))
+                .paths(PathSelectors.any()).build().groupName("系统管理").pathMapping("/");
+    }
+
+    @Bean
+    public Docket createRestApiForBiz() {
+        return new Docket(DocumentationType.SWAGGER_2).enable(true).apiInfo(apiInfo()).select()
+                .apis(RequestHandlerSelectors.basePackage("io.ddd.framework.adapter.rest.biz"))
+                .paths(PathSelectors.any()).build().groupName("业务管理").pathMapping("/");
+    }
+
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder().title("API文档").description("").termsOfServiceUrl("").version("1.0").build();
     }
