@@ -71,7 +71,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()  // 所有请求需要身份认证
                 .and()
                 .exceptionHandling()
-                .authenticationEntryPoint(new CustomAuthenticationEntryPoint("Basic realm=DevAdmin"))
+                .authenticationEntryPoint(new CustomAuthenticationEntryPoint("Basic realm=ddd-framework"))
                 .accessDeniedHandler(customAccessDeniedHandler) // 自定义访问失败处理器
                 .and()
                 .addFilter(new JWTLoginFilter(authenticationManager(),authorizeService))
