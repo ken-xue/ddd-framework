@@ -20,7 +20,7 @@ import javax.validation.Valid;
  * @date 2022-01-28 21:50:48
  */
 @RestController
-@Api(tags = "模块",description = "包含用户新增/列表/删除")
+@Api(tags = "字典模块",description = "包含用户新增/列表/删除")
 @RequestMapping("sys/dictionary")
 public class DictionaryController extends BasicController {
     @Resource

@@ -109,7 +109,7 @@ mvn ddd-framework:delete
 
 ## Document
 
-- [详细设计文档]()
+- [design document]()
 
 ## License
 

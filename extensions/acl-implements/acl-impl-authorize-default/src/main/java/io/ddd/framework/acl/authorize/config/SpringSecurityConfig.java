@@ -47,7 +47,9 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
             "/configuration/security",
             "/swagger-ui.html",
             "/webjars/**",
-            "/ok"
+            "/ok",
+            "/sendResponseEncryData",
+            "/getRequestData"
     };
 
     @Resource
