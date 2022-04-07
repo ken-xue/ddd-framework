@@ -115,7 +115,10 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
+        <dependency>
+            <groupId>com.github.ulisesbocchio</groupId>
+            <artifactId>jasypt-spring-boot-starter</artifactId>
+        </dependency>
         <!--缺省组件-->
         <dependency>
             <groupId>io.ddd.framework</groupId>
