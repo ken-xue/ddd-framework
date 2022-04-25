@@ -8,6 +8,7 @@ ACTION=$1
 ENV=$2
 APP_START_TIMEOUT=20    # 等待应用启动的时间
 APP_PORT=8088         # 应用端口
+REMOTE_DEBUG_PORT=8888         # 开发环境远程DEBUG端口
 HEALTH_CHECK_URL=http://127.0.0.1:${APP_PORT}/api/ok  # 应用健康检查URL
 HEALTH_CHECK_FILE_DIR=/home/admin/status   # 脚本会在这个目录下生成nginx-status文件
 APP_HOME=/home/admin/app/${APP_NAME} # 从package.tgz中解压出来的jar包放到这个目录下
@@ -55,7 +56,7 @@ start_application() {
     if [ "$ENV" == "dev" ]
     then
       echo "use env dev"
-      nohup java -jar ${JAR_NAME} > ${JAVA_OUT} 2>&1 &
+      nohup java -jar -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=${REMOTE_DEBUG_PORT} ${JAR_NAME} > ${JAVA_OUT} --spring.profiles.active=dev 2>&1 &
     elif [ "$ENV" == "test" ]
     then
       nohup java -jar ${JAR_NAME} > ${JAVA_OUT} --spring.profiles.active=test 2>&1 &

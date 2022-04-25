@@ -5,8 +5,12 @@ import io.ddd.framework.adapter.rest.common.BasicController;
 import io.ddd.framework.coreclient.api.sys.RoleAppService;
 import io.ddd.framework.coreclient.dto.common.response.Response;
 import io.ddd.framework.coreclient.dto.sys.role.*;
+import io.ddd.framework.sharedataobject.common.validator.group.Delete;
+import io.ddd.framework.sharedataobject.common.validator.group.Insert;
+import io.ddd.framework.sharedataobject.common.validator.group.Update;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -26,14 +30,14 @@ public class RoleController extends BasicController {
     @PostMapping("/add")
     @ApiOperation(value = "添加",httpMethod = "POST")
     @Permissions("sys:role:add")
-    public Response add(@RequestBody @Valid RoleAddCmd roleAddCmd) {
+    public Response add(@RequestBody @Validated({Insert.class}) RoleAddCmd roleAddCmd) {
         return roleAppService.add(roleAddCmd);
     }
 
     @DeleteMapping("/delete")
     @Permissions("sys:role:delete")
     @ApiOperation(value = "删除",httpMethod = "DELETE")
-    public Response delete(@RequestBody @Valid RoleDeleteCmd roleDeleteCmd){
+    public Response delete(@RequestBody @Validated({Delete.class}) RoleDeleteCmd roleDeleteCmd){
         return roleAppService.delete(roleDeleteCmd);
     }
 
@@ -61,7 +65,7 @@ public class RoleController extends BasicController {
     @PutMapping("/update")
     @Permissions("sys:role:update")
     @ApiOperation(value = "更新",httpMethod = "PUT")
-    public Response update(@RequestBody RoleUpdateCmd roleUpdateCmd){
+    public Response update(@RequestBody @Validated({Update.class}) RoleUpdateCmd roleUpdateCmd){
         return roleAppService.update(roleUpdateCmd);
     }
 }

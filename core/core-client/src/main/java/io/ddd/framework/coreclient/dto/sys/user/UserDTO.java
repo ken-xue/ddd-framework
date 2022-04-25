@@ -3,7 +3,7 @@ package io.ddd.framework.coreclient.dto.sys.user;
 import io.ddd.framework.coreclient.dto.common.command.CommonDTO;
 import io.ddd.framework.coreclient.dto.sys.menu.MenuDTO;
 import io.ddd.framework.coreclient.dto.sys.role.RoleDTO;
-import io.ddd.framework.sharedataobject.common.validator.group.Add;
+import io.ddd.framework.sharedataobject.common.validator.group.Insert;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -14,9 +14,9 @@ import java.util.Set;
 @Data
 @Accessors(chain = true)
 public class UserDTO extends CommonDTO {
-    @NotEmpty(message = "用户账号不能为空",groups = {Add.class})
+    @NotEmpty(message = "用户账号不能为空",groups = {Insert.class})
     private String userId;
-    @NotEmpty(message = "密码不能为空",groups = {Add.class})
+    @NotEmpty(message = "密码不能为空",groups = {Insert.class})
     private String userPassword;
     private String userName;
     //验证码
