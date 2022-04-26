@@ -66,7 +66,7 @@ Setting->Build,Execution,Deployment->Compiler->User-local build
 
 1.创建数据库表
 
-2.导入插件
+2.导入[插件](https://github.com/ken-xue/ddd-framework-maven-plugin)
 
 ```xml
 <plugin>
