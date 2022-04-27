@@ -2,7 +2,6 @@ package io.ddd.framework.coreclient.exception.code;
 
 public enum AuthErrorCode implements ErrorCode{
 
-    SUCCESS(2000,"操作成功"),
     NEED_LOGIN(4010,"请先登录"),
     EXPIRED_TOKEN(4011,"Token已过期"),
     ERROR_FORMAT_TOKEN(4012,"Token格式错误"),

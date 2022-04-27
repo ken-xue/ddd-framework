@@ -14,7 +14,20 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
+        <maven.archetype.version>3.0.1</maven.archetype.version>
     </properties>
+
+    <dependencies>
+<!--        1.mvn archetype:create-from-project-->
+<!--        2.cd 进入generated-sourced/archetype目录，做适当的修改，运行 mvn clean install 或者部署到自己的私服 -->
+<!--        3.idea 在创建项目时选 Add archetype > 输入上方的坐标，创建项目时选择模板即可-->
+<!--        4.执行 mvn archetype:generate -DarchetypeCatalog=local从本地 archeType 模板中创建项目-->
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-archetype-plugin</artifactId>
+            <version>${maven.archetype.version}</version>
+        </dependency>
+    </dependencies>
 
     <modules>
         <module>core</module>
