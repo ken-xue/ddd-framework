@@ -49,10 +49,27 @@ ddd-framework
 
 ## QuickStart
 
+1.Direct clone project use
+
 ```bash
 git clone https://github.com/ken-xue/ddd-framework.git
 cd ddd-framework
-mvn install
+mvn clean install
+```
+
+2.Created by Maven archetype
+
+```bash
+# 1.Download code
+git clone https://github.com/ken-xue/ddd-framework.git
+cd ddd-framework
+mvn clean install
+# 2.Create archetype
+mvn archetype:create-from-project
+cd target/generated-sources/archetype
+mvn clean install
+# 3.Creating projects from archetype
+mvn archetype:generate -DarchetypeCatalog=local
 ```
 
 - If you encounter mapstruct problems, please set the following settings in idea

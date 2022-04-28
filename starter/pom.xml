@@ -10,13 +10,14 @@
     <name>starter</name>
 
     <properties>
-        <ddd-framework-version>0.0.1-SNAPSHOT</ddd-framework-version>
+        <version>0.0.1-SNAPSHOT</version>
+
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>io.ddd.framework</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>dependencies</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
                 <type>pom</type>
@@ -43,34 +44,34 @@
         </dependency>
         <!--    工程    -->
         <dependency>
-            <groupId>io.ddd.framework</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>acl</artifactId>
-            <version>${ddd-framework-version}</version>
+            <version>${version}</version>
         </dependency>
         <dependency>
-            <groupId>io.ddd.framework</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>adapter</artifactId>
-            <version>${ddd-framework-version}</version>
+            <version>${version}</version>
         </dependency>
         <dependency>
-            <groupId>io.ddd.framework</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>application</artifactId>
-            <version>${ddd-framework-version}</version>
+            <version>${version}</version>
         </dependency>
         <dependency>
-            <groupId>io.ddd.framework</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>core-client</artifactId>
-            <version>${ddd-framework-version}</version>
+            <version>${version}</version>
         </dependency>
         <dependency>
-            <groupId>io.ddd.framework</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>domain</artifactId>
-            <version>${ddd-framework-version}</version>
+            <version>${version}</version>
         </dependency>
         <dependency>
-            <groupId>io.ddd.framework</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>infrastructure</artifactId>
-            <version>${ddd-framework-version}</version>
+            <version>${version}</version>
         </dependency>
 
         <dependency>
@@ -121,24 +122,24 @@
         </dependency>
         <!--缺省组件-->
         <dependency>
-            <groupId>io.ddd.framework</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>acl-impl-authorize-default</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>io.ddd.framework</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>acl-impl-database-default</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>io.ddd.framework</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>acl-impl-event-default</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
     <build>
-        <finalName>ddd-framework</finalName>
+        <finalName>${project.artifactId}</finalName>
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -191,29 +192,30 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>io.ddd.framework</groupId>
-                <artifactId>ddd-framework-maven-plugin</artifactId>
-                <version>1.0.5-SNAPSHOT</version>
-                <configuration>
-                    <dataSource>
-                        <driverName>com.mysql.cj.jdbc.Driver</driverName>
-                        <url>jdbc:mysql://127.0.0.1:3306/ddd_framework</url>
-                        <username>root</username>
-                        <password>123456</password>
-                    </dataSource>
-                    <config>
-                        <absolutePath>/Users/biaoyang/IdeaProjects/ddd/ddd-framework/</absolutePath>
-                        <tablePrefixes>sys_,biz_</tablePrefixes>
-                        <moduleName>sys</moduleName>
-                        <basePackageName>io.ddd.framework</basePackageName>
-                        <tableNames>sys_test,sys_use</tableNames>
-                        <excludeFields>id,uuid,creator,modifier,gmt_create,gmt_modified,deleted</excludeFields>
-                        <author>麦奇</author>
-                        <email>biaogejiushibiao@outlook.com</email>
-                    </config>
-                </configuration>
-            </plugin>
+<!--            代码生成器 （自行下载本地安装或者部署到私服） 地址: https://github.com/ken-xue/ddd-framework-maven-plugin-->
+<!--            <plugin>-->
+<!--                <groupId>io.ddd.framework</groupId>-->
+<!--                <artifactId>ddd-framework-maven-plugin</artifactId>-->
+<!--                <version>1.0.5-SNAPSHOT</version>-->
+<!--                <configuration>-->
+<!--                    <dataSource>-->
+<!--                        <driverName>com.mysql.cj.jdbc.Driver</driverName>-->
+<!--                        <url>jdbc:mysql://127.0.0.1:3306/ddd_framework</url>-->
+<!--                        <username>root</username>-->
+<!--                        <password>123456</password>-->
+<!--                    </dataSource>-->
+<!--                    <config>-->
+<!--                        <absolutePath>/Users/biaoyang/IdeaProjects/ddd/ddd-framework/</absolutePath>-->
+<!--                        <tablePrefixes>sys_,biz_</tablePrefixes>-->
+<!--                        <moduleName>sys</moduleName>-->
+<!--                        <basePackageName>io.ddd.framework</basePackageName>-->
+<!--                        <tableNames>sys_test,sys_use</tableNames>-->
+<!--                        <excludeFields>id,uuid,creator,modifier,gmt_create,gmt_modified,deleted</excludeFields>-->
+<!--                        <author>麦奇</author>-->
+<!--                        <email>biaogejiushibiao@outlook.com</email>-->
+<!--                    </config>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 </project>

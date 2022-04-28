@@ -29,44 +29,44 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>io.ddd.framework</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>dependencies</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
-                <groupId>io.ddd.framework</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>acl</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
-                <groupId>io.ddd.framework</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>adapter</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
-                <groupId>io.ddd.framework</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>application</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
-                <groupId>io.ddd.framework</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>core-client</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
-                <groupId>io.ddd.framework</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>domain</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
-                <groupId>io.ddd.framework</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>infrastructure</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
-                <groupId>io.ddd.framework</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>share-dataobject</artifactId>
                 <version>${revision}</version>
             </dependency>

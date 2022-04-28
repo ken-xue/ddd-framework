@@ -18,7 +18,7 @@
 			<artifactId>validation-api</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>io.ddd.framework</groupId>
+			<groupId>${groupId}</groupId>
 			<artifactId>share-dataobject</artifactId>
 		</dependency>
 		<dependency>

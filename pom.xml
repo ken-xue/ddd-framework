@@ -18,10 +18,6 @@
     </properties>
 
     <dependencies>
-<!--        1.mvn archetype:create-from-project-->
-<!--        2.cd 进入generated-sourced/archetype目录，做适当的修改，运行 mvn clean install 或者部署到自己的私服 -->
-<!--        3.idea 在创建项目时选 Add archetype > 输入上方的坐标，创建项目时选择模板即可-->
-<!--        4.执行 mvn archetype:generate -DarchetypeCatalog=local从本地 archeType 模板中创建项目-->
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-archetype-plugin</artifactId>
@@ -36,4 +32,19 @@
         <module>extensions</module>
         <module>dependencies</module>
     </modules>
+
+<!--私服地址-->
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Internal Releases</name>
+            <url>http://localhost:8081/nexus/content/repositories/thirdparty</url>
+        </repository>
+        <snapshotRepository>
+            <id>rdc-snapshots</id>
+            <name>非生产库-snapshot</name>
+            <url>https://packages.aliyun.com/maven/repository/2163835-snapshot-hSB4W4</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>

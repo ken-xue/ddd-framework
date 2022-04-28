@@ -49,10 +49,27 @@ ddd-framework
 
 ## 快速开始
 
+1.直接clone项目使用
+
 ```bash
 git clone https://github.com/ken-xue/ddd-framework.git
 cd ddd-framework
-mvn install
+mvn clean install
+```
+
+2.通过 maven archetype 创建
+
+```bash
+# 1.克隆下载
+git clone https://github.com/ken-xue/ddd-framework.git
+cd ddd-framework
+mvn clean install
+# 2.创建原型
+mvn archetype:create-from-project
+cd target/generated-sources/archetype
+mvn clean install
+# 3.通过原型创建项目
+mvn archetype:generate -DarchetypeCatalog=local
 ```
 
 - 如果遇到mapstruct问题请在Idea里如下设置
@@ -66,7 +83,7 @@ Setting->Build,Execution,Deployment->Compiler->User-local build
 
 1.创建数据库表
 
-2.导入[插件](https://github.com/ken-xue/ddd-framework-maven-plugin)
+2.导入[插件](https://github.com/ken-xue/ddd-framework-maven-plugin) 请先自行下载本地部署或者私服部署
 
 ```xml
 <plugin>

@@ -10,12 +10,11 @@
 	<name>application</name>
 	<dependencies>
 		<dependency>
-            <groupId>io.ddd.framework</groupId>
+            <groupId>${groupId}</groupId>
 			<artifactId>core-client</artifactId>
-            <version>${project.version}</version>
 		</dependency>
 		<dependency>
-            <groupId>io.ddd.framework</groupId>
+            <groupId>${groupId}</groupId>
 			<artifactId>infrastructure</artifactId>
             <version>${project.version}</version>
 			<exclusions>

@@ -11,9 +11,8 @@
 	<dependencies>
 		<!--DIP here, Infrastructure depends on Domain-->
 		<dependency>
-			<groupId>io.ddd.framework</groupId>
+			<groupId>${groupId}</groupId>
 			<artifactId>domain</artifactId>
-			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.baomidou</groupId>

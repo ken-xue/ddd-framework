@@ -10,9 +10,8 @@
 	<name>domain</name>
 	<dependencies>
 		<dependency>
-			<groupId>io.ddd.framework</groupId>
+			<groupId>${groupId}</groupId>
 			<artifactId>core-client</artifactId>
-			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>

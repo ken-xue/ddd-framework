@@ -28,15 +28,15 @@
             <artifactId>jjwt</artifactId>
         </dependency>
         <dependency>
-            <groupId>io.ddd.framework</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>domain</artifactId>
         </dependency>
         <dependency>
-            <groupId>io.ddd.framework</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>infrastructure</artifactId>
         </dependency>
         <dependency>
-            <groupId>io.ddd.framework</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>acl</artifactId>
         </dependency>
         <dependency>
@@ -48,7 +48,7 @@
             <artifactId>kaptcha</artifactId>
         </dependency>
         <dependency>
-            <groupId>io.ddd.framework</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>core-client</artifactId>
         </dependency>
     </dependencies>
