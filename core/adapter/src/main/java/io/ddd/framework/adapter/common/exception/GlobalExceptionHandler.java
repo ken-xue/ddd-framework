@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.validation.BindException;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.NoHandlerFoundException;
@@ -43,6 +44,12 @@ public class GlobalExceptionHandler {
 
 	@ExceptionHandler(BindException.class)
 	public Response exceptionHandler(BindException e) {
+		String failMsg = e.getBindingResult().getFieldError().getDefaultMessage();
+		return Response.error(failMsg);
+	}
+
+	@ExceptionHandler(MethodArgumentNotValidException.class)
+	public Response exceptionHandler(MethodArgumentNotValidException e) {
 		String failMsg = e.getBindingResult().getFieldError().getDefaultMessage();
 		return Response.error(failMsg);
 	}
