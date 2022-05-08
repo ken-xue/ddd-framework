@@ -1,8 +1,10 @@
 package io.ddd.framework.adapter.common.exception;
 import io.ddd.framework.coreclient.dto.common.response.Response;
 import io.ddd.framework.coreclient.exception.BizException;
+import io.ddd.framework.coreclient.exception.code.AuthErrorCode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DuplicateKeyException;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.validation.BindException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -36,10 +38,10 @@ public class GlobalExceptionHandler {
 		return Response.error(5000,"该数据已存在");
 	}
 
-	@ExceptionHandler(AuthenticationException.class)
+	@ExceptionHandler({AuthenticationException.class, AccessDeniedException.class})
 	public Response handleAuthorizationException(AuthenticationException e){
 		log.error(e.getMessage(), e);
-		return Response.error(403,"没有该操作权限");
+		return Response.of(AuthErrorCode.NOT_HAVE_PERMISSION);
 	}
 
 	@ExceptionHandler(BindException.class)

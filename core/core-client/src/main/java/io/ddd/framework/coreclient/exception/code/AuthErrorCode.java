@@ -6,6 +6,7 @@ public enum AuthErrorCode implements ErrorCode{
     EXPIRED_TOKEN(4011,"Token已过期"),
     ERROR_FORMAT_TOKEN(4012,"Token格式错误"),
     SIGNATURE_FAIL(4013,"签名失败"),
+    NOT_HAVE_PERMISSION(403,"没有该操作权限"),
     ILLEGAL_ARGUMENT(4014,"非法参数异常");
 
     public int code;
