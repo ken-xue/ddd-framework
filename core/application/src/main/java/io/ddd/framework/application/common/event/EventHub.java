@@ -2,6 +2,7 @@ package io.ddd.framework.application.common.event;
 
 
 import io.ddd.framework.coreclient.dto.common.event.EventI;
+import io.ddd.framework.coreclient.dto.common.response.Response;
 import lombok.SneakyThrows;
 import org.springframework.stereotype.Component;
 import java.util.ArrayList;
@@ -50,6 +51,7 @@ public class EventHub {
         if(eventHandlerIS == null){
             eventHandlerIS = new ArrayList<>();
             eventRepository.put(eventClz, eventHandlerIS);
+            responseRepository.put(executor.getClass(), Response.class);//待修复
         }
         eventHandlerIS.add(executor);
 
