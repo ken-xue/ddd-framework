@@ -51,7 +51,8 @@ public class EventHub {
         if(eventHandlerIS == null){
             eventHandlerIS = new ArrayList<>();
             eventRepository.put(eventClz, eventHandlerIS);
-            responseRepository.put(executor.getClass(), Response.class);//待修复
+            //executor.getClass().getMethod("execute").getReturnType().getClass();//获取当前事件处理器的响应结果
+            responseRepository.put(executor.getClass(), Response.class);//默认先使用Response
         }
         eventHandlerIS.add(executor);
 
