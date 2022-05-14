@@ -5,6 +5,8 @@ import io.ddd.framework.acl.authorize.filter.JWTAuthenticationFilter;
 import io.ddd.framework.acl.authorize.filter.JWTLoginFilter;
 import io.ddd.framework.acl.authorize.handler.CustomAuthenticationEntryPoint;
 import io.ddd.framework.acl.authorize.impl.AuthenticationProviderImpl;
+import io.ddd.framework.acl.cache.CacheService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -60,6 +62,9 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     private LogoutSuccessHandler customLogoutSuccessHandler;
     @Resource
     private AuthorizeService authorizeService;
+    @Resource
+    @Qualifier("authCachedImpl")
+    private CacheService cacheService;
 
     // 设置 HTTP 验证规则
     
@@ -74,8 +79,8 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authenticationEntryPoint(new CustomAuthenticationEntryPoint("Basic realm=ddd-framework"))
                 .accessDeniedHandler(customAccessDeniedHandler) // 自定义访问失败处理器
                 .and()
-                .addFilter(new JWTLoginFilter(authenticationManager(),authorizeService))
-                .addFilter(new JWTAuthenticationFilter(authenticationManager()))
+                .addFilter(new JWTLoginFilter(authenticationManager(),authorizeService,cacheService))
+                .addFilter(new JWTAuthenticationFilter(authenticationManager(),cacheService))
                 .logout() // 默认注销行为为logout，可以通过下面的方式来修改
                 .logoutUrl("/logout")
                 .logoutSuccessHandler(customLogoutSuccessHandler)

@@ -28,6 +28,7 @@
         <springfox.swagger>2.7.0</springfox.swagger>
         <jasypt.version>2.1.1</jasypt.version>
         <commons.codec.version>1.15</commons.codec.version>
+        <guava.version>31.1-jre</guava.version>
     </properties>
 
     <dependencyManagement>
@@ -128,6 +129,13 @@
                 <artifactId>commons-codec</artifactId>
                 <version>${commons.codec.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 </project>

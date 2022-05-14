@@ -7,6 +7,7 @@ import io.ddd.framework.acl.authorize.config.JWTConfig;
 import io.ddd.framework.acl.authorize.dto.CaptchaValidateDTO;
 import io.ddd.framework.acl.authorize.util.ResponseUtil;
 import io.ddd.framework.acl.authorize.constant.Constant;
+import io.ddd.framework.acl.cache.CacheService;
 import io.ddd.framework.coreclient.dto.sys.user.UserDTO;
 import io.ddd.framework.coreclient.dto.common.response.Response;
 import io.ddd.framework.coreclient.exception.BizException;
@@ -24,15 +25,21 @@ import javax.servlet.FilterChain;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.*;
+/**
+ * @author mikey
+ */
 public class JWTLoginFilter extends UsernamePasswordAuthenticationFilter {
 
     private AuthenticationManager authenticationManager;
 
     private AuthorizeService authorizeService;
 
-    public JWTLoginFilter(AuthenticationManager authenticationManager, AuthorizeService authorizeService) {
+    private CacheService cacheService;
+
+    public JWTLoginFilter(AuthenticationManager authenticationManager, AuthorizeService authorizeService,CacheService cacheService) {
         this.authenticationManager = authenticationManager;
         this.authorizeService = authorizeService;
+        this.cacheService = cacheService;
     }
 
     // 尝试身份认证(接收并解析用户凭证)
@@ -61,16 +68,13 @@ public class JWTLoginFilter extends UsernamePasswordAuthenticationFilter {
 
     // 认证成功(用户成功登录后，这个方法会被调用，我们在这个方法里生成token)
     
+    @Override
     protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication auth) {
         // builder the token
         String token;
         try {
-            Collection<? extends GrantedAuthority> authorities = auth.getAuthorities();
-            // 定义存放角色集合的对象
-            List roleList = new ArrayList<>();
-            for (GrantedAuthority grantedAuthority : authorities) {
-                roleList.add(grantedAuthority.getAuthority());
-            }
+            //存储到缓存中
+            cacheService.set(auth.getName(),auth.getAuthorities());
             // 生成token start
             Calendar calendar = Calendar.getInstance();
             Date now = calendar.getTime();
@@ -80,7 +84,7 @@ public class JWTLoginFilter extends UsernamePasswordAuthenticationFilter {
             calendar.add(Calendar.MINUTE, JWTConfig.getJwtTokenExpireTime());// 50分钟
             Date time = calendar.getTime();
             token = Jwts.builder()
-                    .setSubject(auth.getName() + "-" + roleList)
+                    .setSubject(auth.getName())
                     .setIssuedAt(now)//签发时间
                     .setExpiration(time)//过期时间
                     .signWith(SignatureAlgorithm.HS512, Constant.SIGNING_KEY) //采用什么算法是可以自己选择的，不一定非要采用HS512
