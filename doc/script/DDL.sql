@@ -48,7 +48,7 @@ DROP TABLE IF EXISTS `sys_dictionary`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `sys_dictionary` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `unique_key` varchar(200) DEFAULT NULL COMMENT '查询的key',
+  `unique_key` varchar(200) not null unique COMMENT '查询的key',
   `value` text COMMENT '字典值',
   `fixed` tinyint(1) DEFAULT '1' COMMENT '是否可更改',
   `remark` varchar(200) DEFAULT NULL COMMENT '备注',
