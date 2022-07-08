@@ -14,11 +14,15 @@ public class DictionaryDO extends CommonEntity {
     /**
      * 查询的key
      */
-    private String key;
+    private String uniqueKey;
     /**
      * 字典值
      */
     private String value;
+    /**
+     * 备注
+     */
+    private String remark;
     /**
      * 是否可更改
      */

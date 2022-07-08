@@ -4,7 +4,7 @@
 
 <mapper namespace="io.ddd.framework.infrastructure.repositoryimpl.sys.database.mapper.DictionaryMapper">
     <resultMap type="io.ddd.framework.infrastructure.repositoryimpl.sys.database.dataobject.DictionaryDO" id="dictionaryMap">
-            <result property="key" column="key"/>
+            <result property="uniqueKey" column="unique_key"/>
             <result property="value" column="value"/>
             <result property="fixed" column="fixed"/>
     </resultMap>

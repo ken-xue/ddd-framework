@@ -16,7 +16,7 @@ public class Dictionary extends CommonEntity {
     /**
      * 查询的key
      */
-    private String key;
+    private String uniqueKey;
     /**
      * 字典值
      */
@@ -25,4 +25,8 @@ public class Dictionary extends CommonEntity {
      * 是否可更改
      */
     private Integer fixed;
+    /**
+     * 备注
+     */
+    private String remark;
 }
